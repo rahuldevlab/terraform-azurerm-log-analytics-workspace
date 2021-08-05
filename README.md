@@ -27,7 +27,7 @@ module "umanis_naming" {
   environment = "tst"
 }
 
-module "umanis_resource_group" {
+module "umanis_law" {
   source = <<path_to_module>>
 
   resource_group_name   = 'azertyuip-rg'
