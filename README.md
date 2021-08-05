@@ -1,9 +1,9 @@
-# Azure Umanis Resource Group
+# Azure Umanis Log Analytics Workspace
 
 [![Build Status](https://dev.azure.com/umanis-consulting/terraform/_apis/build/status/mod_azu_log_analytics_workspace?repoName=mod_azu_log_analytics_workspace&branchName=master)](https://dev.azure.com/umanis-consulting/terraform/_build/latest?definitionId=5&repoName=mod_azu_log_analytics_workspace&branchName=master)[![Unilicence](https://img.shields.io/badge/licence-The%20Unilicence-green)](LICENCE)
 
 
-Common Azure terraform module to create a Log Analytics workspace
+Common Azure terraform module to create a Log Analytics Workspace
 
 ## Naming
 Resource naming is based on the Microsoft CAF naming convention best practices. Custom naming is available by setting the parameter `custom_name`. We rely on the official Terraform Azure CAF naming provider to generate resource names when available.
