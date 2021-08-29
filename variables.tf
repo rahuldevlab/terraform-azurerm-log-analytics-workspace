@@ -77,3 +77,15 @@ variable "caf_prefixes" {
   default     = []
   description = "Prefixes to use for caf naming."
 }
+
+variable "subscription_id" {
+  description = "Azure subscription Id."
+  type        = string
+  default     = ""
+}
+
+variable "tenant_id" {
+  description = "Azure Tenant Id."
+  type        = string
+  default     = ""
+}

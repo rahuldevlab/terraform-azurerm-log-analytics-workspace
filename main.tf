@@ -7,10 +7,16 @@ locals {
   parent_tags   = { for n, v in data.azurerm_resource_group.parent_group.tags : n => v if n != "description" }
   resource_name = coalesce(var.custom_name, azurecaf_name.self.result)
   tags          = { for n, v in merge(local.parent_tags, local.specific_tags, var.custom_tags) : n => v if v != "" }
+
+  subscription_id = coalesce(var.subscription_id, data.azurerm_client_config.current.subscription_id)
+  tenant_id       = coalesce(var.tenant_id, data.azurerm_client_config.current.tenant_id)
 }
 
 data "azurerm_resource_group" "parent_group" {
   name = var.resource_group_name
+}
+
+data "azurerm_client_config" "current" {
 }
 
 resource "azurecaf_name" "self" {
@@ -25,6 +31,8 @@ resource "azurecaf_name" "self" {
 
 
 resource "azurerm_log_analytics_workspace" "self" {
+  provider = azurerm.log_analytics_custom_config
+
   name                              = local.resource_name
   location                          = local.location
   resource_group_name               = data.azurerm_resource_group.parent_group.name

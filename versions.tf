@@ -16,9 +16,13 @@ terraform {
 
 
 provider "azurerm" {
+  alias = "log_analytics_custom_config"
   features {
     log_analytics_workspace {
       permanently_delete_on_destroy = !var.soft_delete_enabled
     }
   }
+
+  subscription_id = local.subscription_id
+  tenant_id       = local.tenant_id
 }
