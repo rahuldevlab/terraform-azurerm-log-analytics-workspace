@@ -26,7 +26,7 @@ resource "azurecaf_name" "self" {
   suffixes      = []
   use_slug      = true
   clean_input   = true
-  separator     = "-"
+  separator     = var.name_separator
 }
 
 

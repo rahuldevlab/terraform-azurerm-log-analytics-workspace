@@ -78,6 +78,11 @@ variable "caf_prefixes" {
   description = "Prefixes to use for caf naming."
 }
 
+variable "name_separator" {
+  type        = string
+  description = "Name separator"
+  default     = "-"
+}
 variable "subscription_id" {
   description = "Azure subscription Id."
   type        = string

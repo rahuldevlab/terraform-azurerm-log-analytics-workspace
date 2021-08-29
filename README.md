@@ -80,6 +80,7 @@ module "umanis_resource_log_analytics" {
 | <a name="input_description"></a> [description](#input\_description) | The resource description. | `string` | `""` | no |
 | <a name="input_internet_ingestion_enabled"></a> [internet\_ingestion\_enabled](#input\_internet\_ingestion\_enabled) | Should the Log Analytics Workflow support ingestion over the Public Internet ? | `bool` | `false` | no |
 | <a name="input_internet_query_enabled"></a> [internet\_query\_enabled](#input\_internet\_query\_enabled) | Should the Log Analytics Workflow support querying over the Public Internet ? | `bool` | `true` | no |
+| <a name="input_name_separator"></a> [name\_separator](#input\_name\_separator) | Name separator | `string` | `"-"` | no |
 | <a name="input_reservation_capcity_in_gb_per_day"></a> [reservation\_capcity\_in\_gb\_per\_day](#input\_reservation\_capcity\_in\_gb\_per\_day) | The capacity reservation level in GB for this workspace. Must be in increments of 100 between 100 and 5000. | `number` | `null` | no |
 | <a name="input_retention_in_days"></a> [retention\_in\_days](#input\_retention\_in\_days) | The workspace data retention in days. Possible values are between 30 and 730. | `number` | `30` | no |
 | <a name="input_soft_delete_enabled"></a> [soft\_delete\_enabled](#input\_soft\_delete\_enabled) | Sould the workspace be soft deleted on destroy. | `bool` | `false` | no |
