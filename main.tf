@@ -33,14 +33,14 @@ resource "azurecaf_name" "self" {
 resource "azurerm_log_analytics_workspace" "self" {
   provider = azurerm.log_analytics_custom_config
 
-  name                              = local.resource_name
-  location                          = local.location
-  resource_group_name               = data.azurerm_resource_group.parent_group.name
-  tags                              = local.tags
-  sku                               = "PerGB2018"
-  retention_in_days                 = var.retention_in_days
-  daily_quota_gb                    = var.daily_quota_gb
-  internet_ingestion_enabled        = var.internet_ingestion_enabled
-  internet_query_enabled            = var.internet_query_enabled
-  reservation_capcity_in_gb_per_day = var.reservation_capcity_in_gb_per_day
+  name                               = local.resource_name
+  location                           = local.location
+  resource_group_name                = data.azurerm_resource_group.parent_group.name
+  tags                               = local.tags
+  sku                                = "PerGB2018"
+  retention_in_days                  = var.retention_in_days
+  daily_quota_gb                     = var.daily_quota_gb
+  internet_ingestion_enabled         = var.internet_ingestion_enabled
+  internet_query_enabled             = var.internet_query_enabled
+  reservation_capacity_in_gb_per_day = var.reservation_capcity_in_gb_per_day
 }
