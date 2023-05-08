@@ -11,11 +11,13 @@ output "name" {
 output "primary_shared_key" {
   value       = azurerm_log_analytics_workspace.self.primary_shared_key
   description = "The Primary shared key for the Log Analytics Workspace."
+  sensitive = true
 }
 
 output "secondary_shared_key" {
   value       = azurerm_log_analytics_workspace.self.secondary_shared_key
   description = "The Secondary shared key for the Log Analytics Workspace."
+  sensitive = true
 }
 
 output "workspace_id" {
